@@ -1,0 +1,23 @@
+import java.util.Scanner;
+public class MissinNoArray {
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter size of array:");
+        int size=sc.nextInt();
+        int[] arr=new int[size];
+        System.out.println("enter the numbers(size-1):");
+        for(int i=0;i<=size-2;i++)
+        {
+            arr[i]=sc.nextInt();
+        }
+int Sumallnum=(size*(size+1))/2;
+        int sum=0;
+        for(int i=0;i<=size-2;i++)
+        {
+            sum=sum+arr[i];
+        }
+        int MissingNo=Sumallnum-sum;
+        System.out.println("Missing no is:"+MissingNo);
+    }
+}
